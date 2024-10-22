@@ -16,7 +16,7 @@ Every close bracket has a corresponding open bracket of the same type.
  */
     public static void main(String[] args) {
         ValidParentheses solution = new ValidParentheses();
-        String input = "({[]})";
+        String input = "([}}])";
         boolean result = solution.validParentheses(input);
 
         System.out.println(result);
@@ -36,7 +36,9 @@ Every close bracket has a corresponding open bracket of the same type.
                 stack.pop();
             } else if (c == ']' && !stack.isEmpty() && stack.peek() == '[') {
                 stack.pop();
-            }
+            } else {
+                return false; //for cases like }}, )), ([}}]) this will return false
+            } //stack.push(c)
         }
         return stack.isEmpty();
     }
