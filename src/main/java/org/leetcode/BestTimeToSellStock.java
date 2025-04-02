@@ -6,7 +6,15 @@ You want to maximize your profit by choosing a single day to buy one stock and c
 
 Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
  */
-public class BestTimeToSellStock {
+public class
+
+
+
+
+
+
+
+BestTimeToSellStock {
     public int maxProfit(int[] prices) {
         int buy = prices[0];
         int profit = 0;
